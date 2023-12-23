@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Sweetalert Library -->
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Book Mark</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1 class="text-capitalize text-center py-2 position-relative m-auto">
+          bookmarker
+        </h1>
+
+        <form action="">
+          <div class="parent py-3 px-4 mt-5">
+            <p class="text-center">
+              <i class="fa-solid fa-bookmark"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </p>
+
+            <label class="fw-bold mb-2" for=""
+              ><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label
+            >
+            <input
+              onkeyup="validateName ()"
+              type="text"
+              class="form-control mb-3"
+              id="book-name"
+              placeholder="Bookmark Name"
+            />
+
+            <label class="fw-bold mb-2" for=""
+              ><i class="fa-solid fa-link pe-2"></i> Site URL</label
+            >
+            <input
+              onkeyup="validateSites ()"
+              type="url"
+              class="form-control mb-3"
+              id="web-site"
+              placeholder="Website URL"
+            />
+
+            <div class="buttons m-auto text-center">
+              <button
+                onclick="creatBookMark (event)"
+                id="addBtn"
+                class="btn btn-outline-danger text-capitalize"
+              >
+                submit
+              </button>
+
+              <button class="btn btn-outline-danger text-capitalize" id="clear">
+                clear
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <table class="table bg-light mt-5">
+          <thead>
+            <tr class="text-capitalize">
+              <td class="text-center fw-bold">index</td>
+              <td class="text-center fw-bold">website Name</td>
+              <td class="text-center fw-bold">upDate</td>
+              <td class="text-center fw-bold">visit</td>
+              <td class="text-center fw-bold">delete</td>
+            </tr>
+          </thead>
+          <tbody id="result"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div
+            class="modal-header d-flex align-items-center justify-content-center"
+          >
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle"></span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h2>
+              Site Name or Url is not valid, Please follow the rules below :
+            </h2>
+            <div class="modal-body-content">
+              <ul class="ps-0 pt-3">
+                <li class="d-flex align-items-center">
+                  <i class="fa-regular fa-circle-right p-2"></i> Site name must
+                  contain at least 3 characters
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="fa-regular fa-circle-right p-2"></i> Site URL must
+                  be a valid one
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

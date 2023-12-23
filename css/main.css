@@ -1,0 +1,94 @@
+:root {
+  --main-color: #fec260;
+  --main-transition: 0.5s;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7ecde;
+}
+
+section {
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+h1 {
+  font-size: 3.125rem;
+  font-family: "Pacifico", cursive;
+  width: fit-content;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 16.5rem;
+  height: 0.3125rem;
+  background-color: var(--main-color);
+  left: 50%;
+  bottom: 13px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: -1;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+h1:hover::after {
+  height: 2.5rem;
+}
+
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+section .container .parent {
+  border-top: 2px dotted #333;
+  border-bottom: 2px dotted #333;
+}
+
+section .container .parent p {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5625rem;
+}
+
+section .container .parent p svg {
+  color: var(--main-color);
+}
+
+/* Start Secition Modal */
+.modal-dialog .modal-content .modal-header span {
+width: 1.25rem;
+height: 1.25rem;
+}
+
+.modal-dialog .modal-content .modal-header span:first-child {
+background-color: #f15f5d;
+}
+
+.modal-dialog .modal-content .modal-header span:nth-child(2) {
+  background-color: #febe2e;
+}
+
+.modal-dialog .modal-content .modal-header span:nth-child(3) {
+  background-color: #4db748;
+}
+
+.modal-dialog .modal-content .modal-body h2 {
+  font-family: "Righteous", sans-serif;
+  font-size: 20px;
+}
+
+.modal-dialog .modal-content .modal-body .modal-body-content li {
+  font-family: "Righteous", sans-serif;
+}
+/* End Secition Modal */
